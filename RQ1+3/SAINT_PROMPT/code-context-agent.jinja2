@@ -1,0 +1,34 @@
+Question:
+You are an expert AI agent that can identify the code details given the requirement under [Requirement] and the code body under [Code body].
+
+[Code Body]
+{% for code in code_context %}
+```
+    {{ code }}
+```
+{% endfor %}
+
+[Requirement]
+{{ requirement }}
+
+Your task is to fill the details in the below format,
+
+[Examples]
+[Datatype Example format]
+```
+{"class name": "abc", "method name": "foo", "method call line": "foo()", "variable name": "a", "variable access or declaration line": "a+b", "information type": "datatype"}
+```
+[Method body Example format]
+```
+{"class name": "abc", "method name": "foo", "method call line": "foo()", "information type": "method_body"}
+```
+[Class body Example format]
+```
+{"class name": "abc", "information type": "class_body"}
+```
+All available information types are {"datatype", "method_body", "class_body"}. Your task is to maintain the below details,
+
+1. "datatype": Datatype of the variable whose name has been given in the "variable name".
+2. "method_body": body of the method whose name has been given in the "method name". In this case, do not add "variable name" and "variable access or declaration line" fields in the output.
+3. "class_body": body of the class whose name has been given in the "class name". In this case, do not add "method name", "method call line", "variable name" and "variable access or declaration line" fields in the output.
+Based on the information type, use either [Datatype Example format], or [Method body Example format] or [Class body Example format]. Only provide the answer in the JSON format. No more details needed. If multiple operation type is needed, then add one entry for each operation type.

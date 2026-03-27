@@ -1,0 +1,4053 @@
+{
+    "Entire run details": {
+        "http_requests": {
+            "total_requests": 74,
+            "total_successful_requests": 47,
+            "total_erroneous_requests": 0,
+            "total_bug_revealing_requests": 27,
+            "total_coverage_increasing_successful_requests": 16,
+            "total_non_coverage_increasing_successful_requests": 31
+        },
+        "fixing_agent": {
+            "total_valid_fixing_requests": 6,
+            "total_requests_fixed": 1,
+            "total_turns": 6,
+            "turn_per_fix": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "successful_fixing_path": [
+                [],
+                [],
+                [
+                    [
+                        "get_code_data"
+                    ]
+                ],
+                [],
+                [],
+                []
+            ],
+            "all_actions_taken": [
+                [
+                    [
+                        "generate_request_for_another_endpoint",
+                        "generate_request_for_another_endpoint",
+                        "generate_request_for_another_endpoint",
+                        "generate_request_for_another_endpoint",
+                        "generate_request_for_another_endpoint"
+                    ]
+                ],
+                [
+                    [
+                        "fix_parameter_value"
+                    ]
+                ],
+                [
+                    [
+                        "get_code_data"
+                    ]
+                ],
+                [
+                    []
+                ],
+                [
+                    []
+                ],
+                [
+                    []
+                ]
+            ],
+            "time_taken_per_fix": [
+                7.295608520507812e-05,
+                4.506111145019531e-05,
+                7.295608520507812e-05,
+                4.601478576660156e-05,
+                4.601478576660156e-05,
+                4.887580871582031e-05
+            ],
+            "coverage": null
+        },
+        "coverage_agent": {
+            "total_valid_requests": 7,
+            "total_requests_reached_goal": 0,
+            "total_turns": 7,
+            "turn_per_request": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "actions_taken": [],
+            "time_taken_per_request": [
+                19.967909812927246,
+                19.83439803123474,
+                19.508031129837036,
+                0.9026031494140625,
+                19.413257122039795,
+                0.8777768611907959,
+                19.081486701965332,
+                0.8301539421081543,
+                152.96466898918152,
+                0.7744040489196777,
+                204.2585051059723,
+                0.7773449420928955,
+                152.65122413635254,
+                0.8890900611877441
+            ],
+            "coverage": null
+        },
+        "db_coverage_agent": {
+            "total_valid_requests": 7,
+            "total_requests_reached_goal": 0,
+            "total_turns": 7,
+            "turn_per_request": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "actions_taken": [],
+            "time_taken_per_request": [
+                19.967909812927246,
+                19.83439803123474,
+                19.508031129837036,
+                0.9026031494140625,
+                19.413257122039795,
+                0.8777768611907959,
+                19.081486701965332,
+                0.8301539421081543,
+                152.96466898918152,
+                0.7744040489196777,
+                204.2585051059723,
+                0.7773449420928955,
+                152.65122413635254,
+                0.8890900611877441
+            ],
+            "coverage": null
+        },
+        "reachability coverage": {
+            "line_coverage": 39.70037453183521,
+            "branch_coverage": 30.0,
+            "instruction_coverage": 41.21376811594203,
+            "database_interaction_line_coverage": 25.0
+        },
+        "application coverage": {
+            "line_coverage": 12.035398230088495,
+            "branch_coverage": 21.052631578947366,
+            "instruction_coverage": 9.844042420461635,
+            "database_interaction_line_coverage": 25.0
+        },
+        "operation coverage": 1.0,
+        "total_time": 2863.780370235443,
+        "db_lines_application": "{\"org.mybatis.jpetstore.web.actions.AccountActionBean\": [{\"method_signature\": \"editAccount()\", \"total_db_line_count\": 1, \"db_line_coverage\": 100.0, \"db_uncovered_lines\": [], \"db_covered_lines\": [138]}, {\"method_signature\": \"newAccount()\", \"total_db_line_count\": 1, \"db_line_coverage\": 0.0, \"db_uncovered_lines\": [116], \"db_covered_lines\": []}], \"org.mybatis.jpetstore.web.actions.OrderActionBean\": [{\"method_signature\": \"newOrder()\", \"total_db_line_count\": 1, \"db_line_coverage\": 0.0, \"db_uncovered_lines\": [152], \"db_covered_lines\": []}, {\"method_signature\": \"viewOrder()\", \"total_db_line_count\": 1, \"db_line_coverage\": 0.0, \"db_uncovered_lines\": [176], \"db_covered_lines\": []}]}"
+    },
+    "org.mybatis.jpetstore.web.actions.OrderActionBean": [
+        {
+            "newOrderForm()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 13.510942935943604
+                },
+                "http_requests": {
+                    "total_requests": 1,
+                    "total_successful_requests": 1,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 1,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 18.84057971014493,
+                    "branch_coverage": 7.142857142857142,
+                    "instruction_coverage": 17.24137931034483,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 17.522194862365723,
+                "uncovered_db_lines": "{}"
+            }
+        },
+        {
+            "listOrders()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 42.98344397544861
+                },
+                "http_requests": {
+                    "total_requests": 5,
+                    "total_successful_requests": 0,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 5,
+                    "total_coverage_increasing_successful_requests": 0,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 42.857142857142854,
+                    "branch_coverage": -100.0,
+                    "instruction_coverage": 38.23529411764706,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 1,
+                    "total_requests_fixed": 0,
+                    "total_turns": 1,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": {
+                        "line_coverage": 0.0,
+                        "branch_coverage": 0.0,
+                        "instruction_coverage": 0.0,
+                        "database_interaction_line_coverage": 0.0
+                    }
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": {
+                        "line_coverage": 42.857142857142854,
+                        "branch_coverage": -100.0,
+                        "instruction_coverage": 38.23529411764706,
+                        "database_interaction_line_coverage": -100.0
+                    }
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 266.40366792678833,
+                "uncovered_db_lines": "{}"
+            }
+        },
+        {
+            "newOrder()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 412.9882118701935
+                },
+                "http_requests": {
+                    "total_requests": 1,
+                    "total_successful_requests": 1,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 1,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 16.216216216216218,
+                    "branch_coverage": 25.0,
+                    "instruction_coverage": 15.602836879432624,
+                    "database_interaction_line_coverage": 0.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 1,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 1,
+                    "turn_per_request": [
+                        1
+                    ],
+                    "actions_taken": [
+                        []
+                    ],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": {
+                        "line_coverage": 16.216216216216218,
+                        "branch_coverage": 25.0,
+                        "instruction_coverage": 15.602836879432624,
+                        "database_interaction_line_coverage": 0.0
+                    }
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 459.46997928619385,
+                "uncovered_db_lines": "{\"typing.Tuple[ForwardRef('org.mybatis.jpetstore.web.actions.OrderActionBean'), ForwardRef('newOrder()')]\": [152]}"
+            }
+        },
+        {
+            "viewOrder()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 50.46255302429199
+                },
+                "http_requests": {
+                    "total_requests": 8,
+                    "total_successful_requests": 0,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 8,
+                    "total_coverage_increasing_successful_requests": 0,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 23.809523809523807,
+                    "branch_coverage": 0.0,
+                    "instruction_coverage": 25.301204819277107,
+                    "database_interaction_line_coverage": 0.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 1,
+                    "total_requests_fixed": 0,
+                    "total_turns": 1,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": {
+                        "line_coverage": 0.0,
+                        "branch_coverage": 0.0,
+                        "instruction_coverage": 0.0,
+                        "database_interaction_line_coverage": 0.0
+                    }
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": {
+                        "line_coverage": 23.809523809523807,
+                        "branch_coverage": 0.0,
+                        "instruction_coverage": 25.301204819277107,
+                        "database_interaction_line_coverage": 0.0
+                    }
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 183.98714184761047,
+                "uncovered_db_lines": "{\"typing.Tuple[ForwardRef('org.mybatis.jpetstore.web.actions.OrderActionBean'), ForwardRef('viewOrder()')]\": [176]}"
+            }
+        }
+    ],
+    "org.mybatis.jpetstore.web.actions.CartActionBean": [
+        {
+            "addItemToCart()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 38.50305724143982
+                },
+                "http_requests": {
+                    "total_requests": 7,
+                    "total_successful_requests": 0,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 7,
+                    "total_coverage_increasing_successful_requests": 0,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 2.631578947368421,
+                    "branch_coverage": 0.0,
+                    "instruction_coverage": 3.546099290780142,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 1,
+                    "total_requests_fixed": 1,
+                    "total_turns": 1,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": {
+                        "line_coverage": 0.0,
+                        "branch_coverage": 0.0,
+                        "instruction_coverage": 0.0,
+                        "database_interaction_line_coverage": 0.0
+                    }
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": {
+                        "line_coverage": 2.631578947368421,
+                        "branch_coverage": 0.0,
+                        "instruction_coverage": 3.546099290780142,
+                        "database_interaction_line_coverage": -100.0
+                    }
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 88.92468118667603,
+                "uncovered_db_lines": "{}"
+            }
+        },
+        {
+            "removeItemFromCart()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 43.956849098205566
+                },
+                "http_requests": {
+                    "total_requests": 5,
+                    "total_successful_requests": 5,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 1,
+                    "total_non_coverage_increasing_successful_requests": 4
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 63.63636363636363,
+                    "branch_coverage": 50.0,
+                    "instruction_coverage": 61.904761904761905,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 1,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 1,
+                    "turn_per_request": [
+                        1
+                    ],
+                    "actions_taken": [
+                        []
+                    ],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": {
+                        "line_coverage": 63.63636363636363,
+                        "branch_coverage": 50.0,
+                        "instruction_coverage": 61.904761904761905,
+                        "database_interaction_line_coverage": -100.0
+                    }
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 71.62740921974182,
+                "uncovered_db_lines": "{}"
+            }
+        },
+        {
+            "updateCartQuantities()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 128.04467511177063
+                },
+                "http_requests": {
+                    "total_requests": 8,
+                    "total_successful_requests": 8,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 1,
+                    "total_non_coverage_increasing_successful_requests": 7
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 25.0,
+                    "branch_coverage": 25.0,
+                    "instruction_coverage": 28.235294117647058,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 1,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 1,
+                    "turn_per_request": [
+                        1
+                    ],
+                    "actions_taken": [
+                        []
+                    ],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": {
+                        "line_coverage": 25.0,
+                        "branch_coverage": 25.0,
+                        "instruction_coverage": 28.235294117647058,
+                        "database_interaction_line_coverage": -100.0
+                    }
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 156.67205810546875,
+                "uncovered_db_lines": "{}"
+            }
+        },
+        {
+            "checkOut()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 8.616060972213745
+                },
+                "http_requests": {
+                    "total_requests": 1,
+                    "total_successful_requests": 1,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 1,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 100.0,
+                    "branch_coverage": -100.0,
+                    "instruction_coverage": 100.0,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 10.915625095367432,
+                "uncovered_db_lines": "{}"
+            }
+        },
+        {
+            "viewCart()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 13.806757926940918
+                },
+                "http_requests": {
+                    "total_requests": 1,
+                    "total_successful_requests": 1,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 1,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 100.0,
+                    "branch_coverage": -100.0,
+                    "instruction_coverage": 100.0,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 16.042911052703857,
+                "uncovered_db_lines": "{}"
+            }
+        }
+    ],
+    "org.mybatis.jpetstore.web.actions.AccountActionBean": [
+        {
+            "signonForm()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 7.790710926055908
+                },
+                "http_requests": {
+                    "total_requests": 1,
+                    "total_successful_requests": 1,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 1,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 100.0,
+                    "branch_coverage": -100.0,
+                    "instruction_coverage": 100.0,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 10.298711061477661,
+                "uncovered_db_lines": "{}"
+            }
+        },
+        {
+            "newAccountForm()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 7.715444087982178
+                },
+                "http_requests": {
+                    "total_requests": 1,
+                    "total_successful_requests": 1,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 1,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 100.0,
+                    "branch_coverage": -100.0,
+                    "instruction_coverage": 100.0,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 10.02501392364502,
+                "uncovered_db_lines": "{}"
+            }
+        },
+        {
+            "signon()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 158.52122616767883
+                },
+                "http_requests": {
+                    "total_requests": 5,
+                    "total_successful_requests": 5,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 1,
+                    "total_non_coverage_increasing_successful_requests": 4
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 72.0,
+                    "branch_coverage": 50.0,
+                    "instruction_coverage": 64.94845360824742,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 1,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 1,
+                    "turn_per_request": [
+                        1
+                    ],
+                    "actions_taken": [
+                        []
+                    ],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": {
+                        "line_coverage": 72.0,
+                        "branch_coverage": 50.0,
+                        "instruction_coverage": 64.94845360824742,
+                        "database_interaction_line_coverage": -100.0
+                    }
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 186.14615607261658,
+                "uncovered_db_lines": "{}"
+            }
+        },
+        {
+            "signoff()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 18.319130182266235
+                },
+                "http_requests": {
+                    "total_requests": 1,
+                    "total_successful_requests": 1,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 1,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 100.0,
+                    "branch_coverage": -100.0,
+                    "instruction_coverage": 100.0,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 20.544456005096436,
+                "uncovered_db_lines": "{}"
+            }
+        },
+        {
+            "newAccount()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 143.42492127418518
+                },
+                "http_requests": {
+                    "total_requests": 1,
+                    "total_successful_requests": 0,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 1,
+                    "total_coverage_increasing_successful_requests": 0,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 15.384615384615385,
+                    "branch_coverage": -100.0,
+                    "instruction_coverage": 10.344827586206897,
+                    "database_interaction_line_coverage": 0.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 1,
+                    "total_requests_fixed": 0,
+                    "total_turns": 1,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": {
+                        "line_coverage": 0.0,
+                        "branch_coverage": 0.0,
+                        "instruction_coverage": 0.0,
+                        "database_interaction_line_coverage": 0.0
+                    }
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": {
+                        "line_coverage": 15.384615384615385,
+                        "branch_coverage": -100.0,
+                        "instruction_coverage": 10.344827586206897,
+                        "database_interaction_line_coverage": 0.0
+                    }
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 175.38679432868958,
+                "uncovered_db_lines": "{\"typing.Tuple[ForwardRef('org.mybatis.jpetstore.web.actions.AccountActionBean'), ForwardRef('newAccount()')]\": [116]}"
+            }
+        },
+        {
+            "editAccount()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 288.24463272094727
+                },
+                "http_requests": {
+                    "total_requests": 1,
+                    "total_successful_requests": 0,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 1,
+                    "total_coverage_increasing_successful_requests": 0,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 78.57142857142857,
+                    "branch_coverage": -100.0,
+                    "instruction_coverage": 71.42857142857143,
+                    "database_interaction_line_coverage": 100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 1,
+                    "total_requests_fixed": 0,
+                    "total_turns": 1,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": {
+                        "line_coverage": 0.0,
+                        "branch_coverage": 0.0,
+                        "instruction_coverage": 0.0,
+                        "database_interaction_line_coverage": 0.0
+                    }
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": {
+                        "line_coverage": 78.57142857142857,
+                        "branch_coverage": -100.0,
+                        "instruction_coverage": 71.42857142857143,
+                        "database_interaction_line_coverage": 100.0
+                    }
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 420.65970373153687,
+                "uncovered_db_lines": "{\"typing.Tuple[ForwardRef('org.mybatis.jpetstore.web.actions.AccountActionBean'), ForwardRef('editAccount()')]\": []}"
+            }
+        },
+        {
+            "editAccountForm()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 7.912884950637817
+                },
+                "http_requests": {
+                    "total_requests": 1,
+                    "total_successful_requests": 1,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 1,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 100.0,
+                    "branch_coverage": -100.0,
+                    "instruction_coverage": 100.0,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 10.419142961502075,
+                "uncovered_db_lines": "{}"
+            }
+        }
+    ],
+    "org.mybatis.jpetstore.web.actions.CatalogActionBean": [
+        {
+            "searchProducts()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 39.40269327163696
+                },
+                "http_requests": {
+                    "total_requests": 7,
+                    "total_successful_requests": 7,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 2,
+                    "total_non_coverage_increasing_successful_requests": 5
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 77.77777777777779,
+                    "branch_coverage": 66.66666666666666,
+                    "instruction_coverage": 87.09677419354838,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 1,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 1,
+                    "turn_per_request": [
+                        1
+                    ],
+                    "actions_taken": [
+                        []
+                    ],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": {
+                        "line_coverage": 77.77777777777779,
+                        "branch_coverage": 66.66666666666666,
+                        "instruction_coverage": 87.09677419354838,
+                        "database_interaction_line_coverage": -100.0
+                    }
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 200.77927112579346,
+                "uncovered_db_lines": "{}"
+            }
+        },
+        {
+            "viewMain()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 11.876186847686768
+                },
+                "http_requests": {
+                    "total_requests": 1,
+                    "total_successful_requests": 1,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 1,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 100.0,
+                    "branch_coverage": -100.0,
+                    "instruction_coverage": 100.0,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 14.15324592590332,
+                "uncovered_db_lines": "{}"
+            }
+        },
+        {
+            "viewProduct()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 43.24480581283569
+                },
+                "http_requests": {
+                    "total_requests": 7,
+                    "total_successful_requests": 7,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 1,
+                    "total_non_coverage_increasing_successful_requests": 6
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 100.0,
+                    "branch_coverage": 100.0,
+                    "instruction_coverage": 100.0,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 1,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 1,
+                    "turn_per_request": [
+                        1
+                    ],
+                    "actions_taken": [
+                        []
+                    ],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": {
+                        "line_coverage": 100.0,
+                        "branch_coverage": 100.0,
+                        "instruction_coverage": 100.0,
+                        "database_interaction_line_coverage": -100.0
+                    }
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 255.9705629348755,
+                "uncovered_db_lines": "{}"
+            }
+        },
+        {
+            "viewItem()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 47.84065890312195
+                },
+                "http_requests": {
+                    "total_requests": 5,
+                    "total_successful_requests": 0,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 5,
+                    "total_coverage_increasing_successful_requests": 0,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 40.0,
+                    "branch_coverage": -100.0,
+                    "instruction_coverage": 48.0,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 1,
+                    "total_requests_fixed": 0,
+                    "total_turns": 1,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": {
+                        "line_coverage": 0.0,
+                        "branch_coverage": 0.0,
+                        "instruction_coverage": 0.0,
+                        "database_interaction_line_coverage": 0.0
+                    }
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": {
+                        "line_coverage": 40.0,
+                        "branch_coverage": -100.0,
+                        "instruction_coverage": 48.0,
+                        "database_interaction_line_coverage": -100.0
+                    }
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 81.0806200504303,
+                "uncovered_db_lines": "{}"
+            }
+        },
+        {
+            "viewCategory()": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        13.510942935943604,
+                        42.98344397544861,
+                        412.9882118701935,
+                        50.46255302429199,
+                        38.50305724143982,
+                        43.956849098205566,
+                        128.04467511177063,
+                        8.616060972213745,
+                        13.806757926940918,
+                        7.790710926055908,
+                        7.715444087982178,
+                        158.52122616767883,
+                        18.319130182266235,
+                        143.42492127418518,
+                        288.24463272094727,
+                        7.912884950637817,
+                        39.40269327163696,
+                        11.876186847686768,
+                        43.24480581283569,
+                        47.84065890312195,
+                        41.48606514930725
+                    ],
+                    "time_taken": 41.48606514930725
+                },
+                "http_requests": {
+                    "total_requests": 6,
+                    "total_successful_requests": 6,
+                    "total_erroneous_requests": 0,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 1,
+                    "total_non_coverage_increasing_successful_requests": 5
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 100.0,
+                    "branch_coverage": 100.0,
+                    "instruction_coverage": 100.0,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [],
+                        [],
+                        []
+                    ],
+                    "all_actions_taken": [
+                        [
+                            [
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint",
+                                "generate_request_for_another_endpoint"
+                            ]
+                        ],
+                        [
+                            [
+                                "fix_parameter_value"
+                            ]
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ],
+                        [
+                            []
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        7.295608520507812e-05,
+                        4.506111145019531e-05,
+                        7.295608520507812e-05,
+                        4.601478576660156e-05,
+                        4.601478576660156e-05,
+                        4.887580871582031e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 1,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 1,
+                    "turn_per_request": [
+                        1
+                    ],
+                    "actions_taken": [
+                        []
+                    ],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": {
+                        "line_coverage": 100.0,
+                        "branch_coverage": 100.0,
+                        "instruction_coverage": 100.0,
+                        "database_interaction_line_coverage": -100.0
+                    }
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "actions_taken": [],
+                    "time_taken_per_request": [
+                        19.967909812927246,
+                        19.83439803123474,
+                        19.508031129837036,
+                        0.9026031494140625,
+                        19.413257122039795,
+                        0.8777768611907959,
+                        19.081486701965332,
+                        0.8301539421081543,
+                        152.96466898918152,
+                        0.7744040489196777,
+                        204.2585051059723,
+                        0.7773449420928955,
+                        152.65122413635254,
+                        0.8890900611877441
+                    ],
+                    "coverage": null
+                },
+                "total_time": 202.59428477287292,
+                "uncovered_db_lines": "{}"
+            }
+        }
+    ]
+}

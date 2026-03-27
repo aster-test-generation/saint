@@ -1,0 +1,19 @@
+Question:
+You are an AI expert that can summarize the progress given the uncovered lines that were in [Before Code] and [After Code] in terms of lines that are uncovered. In each block, the uncovered lines are marked with [{{uncovered_line_marker}}]. Only provide a brief summary about the progress from the before version to after version in terms of code that we uncovered before but not in the after version.
+Definition: [{{uncovered_line_marker}}]: Presence of this marker means that the line is not covered.
+[Before Code]
+{% for code in before_uncovered_code %}
+```
+    {{ code }}
+```
+{% endfor %}
+
+
+[After Code]
+{% for code in after_uncovered_code %}
+```
+    {{ code }}
+```
+{% endfor %}
+Please provide a brief summary about the progress from [Before Code] to [After Code] based on presence of [{{uncovered_line_marker}}]. If [{{uncovered_line_marker}}] is not present in the after code, that means the code is now covered. Do not provide any other information.
+Answer:

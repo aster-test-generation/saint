@@ -1,0 +1,28 @@
+Question:
+You are an agent who needs to evaluate the solution that developer came with to fix the problem.
+The original problem was defined under [Original error summary], where due to the problem http requests that got generated resulted in error.
+Developer came up with solutions and the summary of the outcome of each solution is under [Solutions error summary]. Now, your task is to,
+1. Look at each solution and provide a score between 0-1, where 1 being the highest.
+2. Produce a reflection text that capture your thought behind the score.
+3. Produce the output in the format given under [Example output format], where document the "score" and "reflection" for each solution in the same order they are being mentioned.
+
+[Original error summary]
+```
+{{ original_error_summary }}
+```
+
+[Solutions error summary]
+{% for summary in summaries %}
+[ Solution #{{ loop.index }} error summary]
+```
+    {{ summary }}
+```
+{% endfor %}
+
+[Example output format]
+```
+[{"score": , "reflection": }, ]
+```
+
+Only provide {{ summary_length }} output in the JSON format given under [Example output format] for each solution.
+Answer:

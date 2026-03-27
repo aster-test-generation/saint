@@ -1,0 +1,54 @@
+Question:
+You are an expert AI agent that can identify the next step to perform given various information.
+You have been given several details of an application endpoint and a http request, which failed with error message.
+You have (a) previous http requests that being sent with the last one being the erroneous request under [All requests sent] take, (b) endpoint parameter details, which constitutes parameter name and parameter data type under [Parameter details] tag, (c) endpoint path details under [Endpoint path] tag, {% if ipds|length>0 %}(d) inter-parameter dependencies, which says what type of dependency and which parameters are related under what constraints under [Inter-parameter dependencies] tag, (e){% else %}(d){% endif %} body of the code under [Method body] tag, (f) the summary of the error under [Error message] tag, {%- if previous_endpoints!='' %}and other endpoint details under [Other Endpoint Details].{% endif %}
+
+[All requests sent]
+```
+{% for request in requests %}
+    {{ loop.index }}. {{ request }}
+{% endfor %}
+```
+
+{%- if previous_endpoints!='' %}[Other endpoint details]
+{{ previous_endpoints }}
+{%- endif %}
+
+[Parameter details]
+```
+{{ parameters }}
+```
+
+[Endpoint Path]
+```
+{{path}}
+```
+
+{% if ipds|length>0 %}[Inter-parameter dependencies]
+```
+{{ ipds }}
+```
+{% endif %}
+
+[Method body]
+```
+{{ method_body }}
+```
+
+[Error message]
+```
+{{ error_summary }}
+```
+
+Based on all the information, you have to choose one of the following options,
+1. fixing endpoint path = fix the endpoint path as the original request has wrong path
+2. fixing parameter type = fixing one or more parameter types as they are wrong in the original request
+3. fixing parameter value = fixing one or more parameter value as they are wrong in the original request
+4. fixing inter-parameter dependencies = fixing one or more parameter dependencies as they are wrong in the original request
+5. generate more request(s) for this endpoint = perform some pre-requisite actions for this endpoint which can help fixing this error.
+6. generate request(s) for another endpoint = generate requests for a different endpoint under [Other endpoint details] that can satisfy the pre-requisite(s) to fix this error. Add the name of endpoint class and methods that required to be exercised in the explanation text.
+7. get more code data = need more code details to conclude.
+
+You have to give the answer in [{"choice":, "explanation":}] JSON format, where only mention the option number as the choice. You can choose more than one options but try to limit as little as possible. For each choice, provide separate explanation.
+If you choose the option to get more code data, specify exact details that you need.
+Answer:

@@ -1,0 +1,22 @@
+Question:
+You are an AI agent whose job is to create Junit 5 tests using RestAssured framework with all the given details. You have,
+
+a. The test scenario description under [Scenario Description].
+b. Scenario name under [Scenario Name], which you can use for the test class name.
+b. Sub-tasks to achieve the scenario under [Sub-Task Details].
+c. Under each sub-task, you have (i) http request, (ii) http response, and (iii) server status code.
+
+[Scenario Description]
+{{ scenario_description }}
+
+[Scenario Name]
+{{ scenario_name }}
+
+[Sub-Task Details]
+{{ scenario_steps }}
+
+Your task is to,
+1. Generate the entire test and only use Junit5 and RestAssured framework.
+2. If requires to add multiple test method, then either maintain the sequence as it is in the sub-task or add everything in one test method.
+3. Write the entire test class under code ``` block. No explanation needed.
+Answer:

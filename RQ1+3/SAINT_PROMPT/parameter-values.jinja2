@@ -1,0 +1,70 @@
+Question:
+You are an expert parameter sets finder for an API. Your task is to create a variety of parameter sets with realistic and diverse parameter values for API testing. {% if is_ipd %} Parameters mentioned in [Target API] has dependencies among each other and it is mentioned in [Inter-parameter dependencies]. The definition of each dependency type is given in [Inter-parameter dependencies definition].{% endif %}
+With all the details from [Target API]{% if ipds|length>0 %}, [Inter-parameter dependencies], [Inter-parameter dependencies definition],{% endif %} and [Example], fill the rest of details using the format [Fill the dictionary]. {% if is_login_pattern %} There is a login pattern so, first register the userid and use the same userid for other activities. {% endif %}{% if previous_successful_requests_list|length >0%}You also have details from previous successful requests, which may help to find better values. {% endif %}{% if previous_successful_parameter_values|length >0%}You also have details from previous successful request parameter and corresponding values, which you should adhere to get successful requests. {% endif %}{% if is_orm_additional_context %}The parameters {{ orm_parameter }} is/are of entity type and the details of them has been given under [ORM Datatype Information]. Please adhere to them while generating value.{% endif %}
+
+{% if ipds|length>0 %}
+[Inter-parameter dependencies]
+```
+{{ ipds }}
+```
+
+[Inter-parameter dependencies definition]
+```
+Requires: The Requires dependency is the simplest pattern. If a parameter is used (or it has a certain value), then another parameter must be used too (or be set to a certain value).
+Or: Out of two or more parameters, at least one must be used.
+OnlyOne: Out of two or more parameters, one, and only one of them must be used.
+AllOrNone: Out of two or more parameters, either all of them are used, or none of them.
+ZeroOrOne: Out of two or more parameters, either zero or one can be used, but not more.
+Arithmetic: Two or more parameters are related by means of arithmetic (+, –, ×, ÷) or relational (<, ≤, >, ≥, =, ≠) operators. The most common shape of this dependency pattern is two parameters where one must be greater than or equal to the other, i.e., p1 ≥ p2.
+```
+{% endif %}
+
+Target API:
+```
+{
+    "class_name": {{ class_name }},
+    "http_path": {{ http_path }},
+    "parameters": {{ params }}
+}
+```
+
+{% if is_orm_additional_context %}ORM Datatype Information:
+```
+{{ orm_datatype_code }}
+```{% endif %}
+
+{%- if previous_successful_requests_list|length >0%}
+[Previous successful requests]
+{{ previous_successful_requests_list }}
+{%- endif %}
+
+{%- if previous_successful_parameter_values|length >0%}
+[Previous successful request parameter and corresponding values]
+{{ previous_successful_parameter_values }}
+{%- endif %}
+Fill the dictionary:
+```
+[
+    {{ actual_parameters }},
+...
+]
+```
+
+Instructions:
+1. Analyze the given API information, including the class name, HTTP path, and parameters.
+2. Generate a list of set of parameter names with values.
+3. Create diverse parameter sets that cover: Happy path scenarios with valid, typical values
+4. Produce the output in a JSON format which can be parsed with Python json.load code.
+{% if is_login_pattern %}4. There is a login pattern so, first register the userid and use the same userid for other activities. {% endif %}
+
+Example:
+```
+[
+    {"username": "validUser123", "age": 30, "isActive": True},
+    {"username": "a*256", "age": -1},
+    {"username": "admin", "age": 78, "isActive": None}
+]
+```
+
+Ensure your response is a valid list of dictionaries and not provide any method or explanation.
+Answer:

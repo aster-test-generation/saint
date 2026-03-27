@@ -1,0 +1,160 @@
+{
+    "Entire run details": {
+        "http_requests": {
+            "total_requests": 328,
+            "total_successful_requests": 1,
+            "total_erroneous_requests": 327,
+            "total_bug_revealing_requests": 0,
+            "total_coverage_increasing_successful_requests": 1,
+            "total_non_coverage_increasing_successful_requests": 0
+        },
+        "fixing_agent": {
+            "total_valid_fixing_requests": 2,
+            "total_requests_fixed": 1,
+            "total_turns": 2,
+            "turn_per_fix": [
+                1,
+                1
+            ],
+            "successful_fixing_path": [
+                [],
+                [
+                    [
+                        "get_code_data"
+                    ]
+                ]
+            ],
+            "all_actions_taken": [
+                [
+                    []
+                ],
+                [
+                    [
+                        "get_code_data"
+                    ]
+                ]
+            ],
+            "time_taken_per_fix": [
+                5.5789947509765625e-05,
+                8.296966552734375e-05
+            ],
+            "coverage": null
+        },
+        "coverage_agent": {
+            "total_valid_requests": 0,
+            "total_requests_reached_goal": 0,
+            "total_turns": 0,
+            "turn_per_request": [],
+            "actions_taken": [],
+            "time_taken_per_request": [],
+            "coverage": null
+        },
+        "db_coverage_agent": {
+            "total_valid_requests": 0,
+            "total_requests_reached_goal": 0,
+            "total_turns": 0,
+            "turn_per_request": [],
+            "actions_taken": [],
+            "time_taken_per_request": [],
+            "coverage": null
+        },
+        "reachability coverage": {
+            "line_coverage": 52.44444444444445,
+            "branch_coverage": 38.333333333333336,
+            "instruction_coverage": 47.264150943396224,
+            "database_interaction_line_coverage": -100.0
+        },
+        "application coverage": {
+            "line_coverage": 10.41958041958042,
+            "branch_coverage": 8.19935691318328,
+            "instruction_coverage": 9.703400664791612,
+            "database_interaction_line_coverage": -100.0
+        },
+        "operation coverage": 6.0,
+        "total_time": 354.5505349636078,
+        "db_lines_application": "{}"
+    },
+    "org.languagetool.server.LanguageToolHttpHandler": [
+        {
+            "handle(HttpExchange)": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        0.0065860748291015625,
+                        0.009238004684448242,
+                        35.41487002372742,
+                        0.0068171024322509766,
+                        35.6561541557312,
+                        0.008808135986328125
+                    ],
+                    "time_taken": 0.008808135986328125
+                },
+                "http_requests": {
+                    "total_requests": 1,
+                    "total_successful_requests": 0,
+                    "total_erroneous_requests": 1,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 0,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 52.44444444444445,
+                    "branch_coverage": 38.333333333333336,
+                    "instruction_coverage": 47.264150943396224,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [
+                        1,
+                        1
+                    ],
+                    "successful_fixing_path": [
+                        [],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ]
+                    ],
+                    "all_actions_taken": [
+                        [
+                            []
+                        ],
+                        [
+                            [
+                                "get_code_data"
+                            ]
+                        ]
+                    ],
+                    "time_taken_per_fix": [
+                        5.5789947509765625e-05,
+                        8.296966552734375e-05
+                    ],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [],
+                    "actions_taken": [],
+                    "time_taken_per_request": [],
+                    "coverage": null
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [],
+                    "actions_taken": [],
+                    "time_taken_per_request": [],
+                    "coverage": null
+                },
+                "total_time": 3.2504138946533203,
+                "uncovered_db_lines": "{}"
+            }
+        }
+    ]
+}

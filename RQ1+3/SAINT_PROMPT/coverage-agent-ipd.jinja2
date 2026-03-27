@@ -1,0 +1,58 @@
+Question:
+You are an expert to add inter parameter dependencies to increase the coverage of the uncovered code. You have been given the following information,
+1. code with uncovered lines with [{{uncovered_line_marker}}] marking under [Uncovered code] block
+2. available groups and their definition under [Available groups]
+3. existing inter-parameter dependency under [Erroneous grouped parameters].
+{% if additional_context!='' %}4. additional context under [Additional context]{% endif %}
+
+Your task is to look at all the information and add the inter-parameter dependencies and add inter-parameter dependencies in the same format as in [Existing grouped parameters] so that it can cover the uncovered lines. Ensure your response is a valid list of dictionaries and do not repeat the example.
+
+[Available groups]
+Below, the definition of each group. Use this definition and identify constraints if there is any.
+```
+Requires: The Requires dependency is the simplest pattern. If a parameter is used (or it has a certain value), then another parameter must be used too (or be set to a certain value).
+Or: Out of two or more parameters, at least one must be used.
+OnlyOne: Out of two or more parameters, one, and only one of them must be used.
+AllOrNone: Out of two or more parameters, either all of them are used, or none of them.
+ZeroOrOne: Out of two or more parameters, either zero or one can be used, but not more.
+Arithmetic: Two or more parameters are related by means of arithmetic (+, –, ×, ÷) or relational (<, ≤, >, ≥, =, ≠) operators. The most common shape of this dependency pattern is two parameters where one must be greater than or equal to the other, i.e., p1 ≥ p2.
+```
+[Example]
+```
+public void foo(HttpServletRequest req, HttpServletResponse resp) {
+    String a = req.getParameter("a");
+    if (a=="bar")
+    {
+        String b = req.getParameter("b");
+        String c = req.getParameter("c");
+    }
+}
+Output: [
+{"relation_type":"Requires", "parameters": ["a", "b", "c"], "constraint":["a==bar"]},
+]
+```
+
+[Grouped parameters]
+```
+[
+{"relation_type":"Requires", "parameters": [], "constraint":[]},
+]
+```
+
+[Uncovered Code]
+{% for code in uncovered_code %}
+```
+    {{ code }}
+```
+{% endfor %}
+
+{% if additional_context!='' %}
+[Additional context]
+{{ additional_context }}
+{% endif %}
+
+[Existing grouped parameters]
+```
+{{ existing_ipd }}
+```
+Answer:

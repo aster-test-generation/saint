@@ -1,0 +1,116 @@
+{
+    "Entire run details": {
+        "http_requests": {
+            "total_requests": 6,
+            "total_successful_requests": 1,
+            "total_erroneous_requests": 5,
+            "total_bug_revealing_requests": 0,
+            "total_coverage_increasing_successful_requests": 1,
+            "total_non_coverage_increasing_successful_requests": 0
+        },
+        "fixing_agent": {
+            "total_valid_fixing_requests": 0,
+            "total_requests_fixed": 0,
+            "total_turns": 0,
+            "turn_per_fix": [],
+            "successful_fixing_path": [],
+            "all_actions_taken": [],
+            "time_taken_per_fix": [],
+            "coverage": null
+        },
+        "coverage_agent": {
+            "total_valid_requests": 0,
+            "total_requests_reached_goal": 0,
+            "total_turns": 0,
+            "turn_per_request": [],
+            "actions_taken": [],
+            "time_taken_per_request": [],
+            "coverage": null
+        },
+        "db_coverage_agent": {
+            "total_valid_requests": 0,
+            "total_requests_reached_goal": 0,
+            "total_turns": 0,
+            "turn_per_request": [],
+            "actions_taken": [],
+            "time_taken_per_request": [],
+            "coverage": null
+        },
+        "reachability coverage": {
+            "line_coverage": 47.11111111111111,
+            "branch_coverage": 35.0,
+            "instruction_coverage": 41.41509433962264,
+            "database_interaction_line_coverage": -100.0
+        },
+        "application coverage": {
+            "line_coverage": 10.13986013986014,
+            "branch_coverage": 7.877813504823152,
+            "instruction_coverage": 9.439188613312878,
+            "database_interaction_line_coverage": -100.0
+        },
+        "operation coverage": 6.0,
+        "total_time": 30.6229031085968,
+        "db_lines_application": "{}"
+    },
+    "org.languagetool.server.LanguageToolHttpHandler": [
+        {
+            "handle(HttpExchange)": {
+                "endpoint_detection": {
+                    "individual_time": [
+                        0.00946187973022461,
+                        0.011153936386108398,
+                        0.008574962615966797,
+                        0.010902881622314453,
+                        0.017778873443603516,
+                        0.009173154830932617
+                    ],
+                    "time_taken": 0.009173154830932617
+                },
+                "http_requests": {
+                    "total_requests": 1,
+                    "total_successful_requests": 0,
+                    "total_erroneous_requests": 1,
+                    "total_bug_revealing_requests": 0,
+                    "total_coverage_increasing_successful_requests": 0,
+                    "total_non_coverage_increasing_successful_requests": 0
+                },
+                "coverage_before_agents": {
+                    "line_coverage": 47.11111111111111,
+                    "branch_coverage": 35.0,
+                    "instruction_coverage": 41.41509433962264,
+                    "database_interaction_line_coverage": -100.0
+                },
+                "fixing_agent": {
+                    "total_valid_fixing_requests": 0,
+                    "total_requests_fixed": 0,
+                    "total_turns": 0,
+                    "turn_per_fix": [],
+                    "successful_fixing_path": [],
+                    "all_actions_taken": [],
+                    "time_taken_per_fix": [],
+                    "coverage": null
+                },
+                "coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [],
+                    "actions_taken": [],
+                    "time_taken_per_request": [],
+                    "coverage": null
+                },
+                "db_coverage_agent": {
+                    "total_valid_requests": 0,
+                    "total_requests_reached_goal": 0,
+                    "total_turns": 0,
+                    "turn_per_request": [],
+                    "actions_taken": [],
+                    "time_taken_per_request": [],
+                    "coverage": null
+                },
+                "total_time": 3.813566207885742,
+                "uncovered_db_lines": "{}"
+            }
+        }
+    ]
+}

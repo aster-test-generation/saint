@@ -1,0 +1,29 @@
+Question:
+You are an agent who needs to evaluate the solutions that developer came with to cover the uncovered lines.
+The original uncovered code is defined under [Original Uncovered Code] with [{{uncovered_line_marker}}] tag, where existing http request was not able to reach.
+Developer came up with solutions and the summary of the outcome of each solution is under [Solution progress summary]. Now, your task is to,
+1. Look at each solution and provide a score between 0-1, where 1 being the highest.
+2. Produce a reflection text that capture your thought behind the score.
+3. Produce the output in the format given under [Example output format], where document the "score" and "reflection" for each solution in the same order they are being mentioned.
+
+[Original Uncovered Code]
+{% for code in uncovered_code %}
+```
+    {{ code }}
+```
+{% endfor %}
+
+[Solution progress summary]
+{% for summary in summaries %}
+[ Solution #{{ loop.index }} progress summary]
+```
+{{ summary }}
+```
+{% endfor %}
+[Example output format]
+```
+[{"score": , "reflection": }, ]
+```
+
+Only provide {{ summary_length }} output in the JSON format given under [Example output format] for { summary_length }} solution(s) under [Solution progress summary].
+Answer:

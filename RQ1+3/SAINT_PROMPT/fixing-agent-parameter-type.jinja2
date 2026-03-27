@@ -1,0 +1,29 @@
+Question:
+You are an expert in fixing parameter type for http parameters. You have been given, a list of parameters and their types under [List of parameters]. Also, you have the error summary under [Error summary]{% if additional_context!='' %} and additional code context under [Additional context]{% endif %}. {% if is_orm_additional_context %} The parameters {{ orm_parameter }} is/are of entity type and the details of them has been given under [ORM Datatype Information]. Please adhere to them while generating type.{% endif %} Given these, and the method body under [Method body], your task is to,
+1. fix the parameter types and create the response with fixed types in the same format as given under [List of parameter].
+
+[List of parameters]
+```
+{{ parameter_names }}
+```
+
+{% if is_orm_additional_context %}[ORM Datatype Information]
+```
+{{ orm_datatype_code }}
+```{% endif %}
+
+[Method body]
+```
+{{ method_body }}
+```
+
+{% if additional_context!='' %}
+[Additional context]
+{{ additional_context }}
+{% endif %}
+
+[Error summary]
+```
+{{ error_summary }}
+```
+Answer:

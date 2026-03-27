@@ -1,0 +1,17 @@
+Question:
+You are an AI agent whose task is to judge whether the request is a similar one or not. You have the information,
+1. Under [Request], you have the actual request string and server response.
+2. Under [Previous Requests], you have the previous requests and server responses.
+
+[Request]
+Request String: {{ fixing_request }}
+Server response: {{ fixing_response }}
+
+[Previous Requests]
+{{ previous_requests }}
+
+Your task is to,
+
+1. Go through each of the previous requests and decide whether the request is a similar one or not based on the outcome of the request.
+2. If duplicate, answer just "TRUE", else answer "FALSE".
+Answer:

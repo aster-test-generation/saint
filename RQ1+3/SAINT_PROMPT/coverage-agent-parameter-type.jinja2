@@ -1,0 +1,30 @@
+Question:
+You are an expert in fixing parameter type for http parameters so that the updated requests can cover the uncovered lines marked with [{{uncovered_line_marker}}] under [Uncovered Code] tag. You have been given, a list of parameters and their types under [List of parameters]. Also, you have the choice explanation under [Choice explanation]{% if additional_context!='' %} and additional context under [Additional context]{% endif %}.  {% if is_orm_additional_context %}The parameters {{ orm_parameter }} is/are of entity type and the details of them has been given under [ORM Datatype Information]. Please adhere to them while generating parameter type.{% endif %} Given these, and the code under [Uncovered Code], your task is to,
+1. fix the parameter types and create the response with fixed types in the same format as given under [List of parameter] so that the uncovered lines are covered.
+
+[List of parameters]
+```
+{{ parameter_names }}
+```
+[Uncovered Code]
+{% for code in uncovered_code %}
+```
+    {{ code }}
+```
+{% endfor %}
+
+{% if additional_context!='' %}
+[Additional context]
+{{ additional_context }}
+{% endif %}
+
+{% if is_orm_additional_context %}[ORM Datatype Information]
+```
+{{ orm_datatype_code }}
+```{% endif %}
+
+[Choice explanation]
+```
+{{ choice_explanation }}
+```
+Answer:
