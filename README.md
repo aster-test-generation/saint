@@ -237,15 +237,11 @@ SAINT has been extensively evaluated on the following applications:
 If you use SAINT in your research or project, please cite our ICSE 2026 paper:
 
 ```bibtex
-@inproceedings{saint2026,
+@inproceedings{pan2026saint,
   title={SAINT: Service-level Integration Test Generation with Program Analysis and LLM-based Agents},
-  author={[Authors]},
-  booktitle={Proceedings of the 48th International Conference on Software Engineering (ICSE)},
-  year={2026},
-  publisher={ACM},
-  address={New York, NY, USA},
-  doi={[DOI]},
-  url={https://conf.researchr.org/details/icse-2026/icse-2026-research-track/143/}
+  author={Pan, Rangeet and Pavuluri, Raju and Huang, Ruikai and Krishna, Rahul and Stennett, Tyler and Orso, Alessandro and Sinha, Saurabh},
+  booktitle={2026 IEEE/ACM 48th International Conference on Software Engineering (ICSE)},
+  year={2026}
 }
 ```
 
@@ -255,28 +251,8 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDeri
 
 [![CC BY-NC-ND 4.0](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-## 🔗 Links
 
-- [ICSE 2026 Paper](https://conf.researchr.org/details/icse-2026/icse-2026-research-track/143/SAINT-Service-level-Integration-Test-Generation-with-Program-Analysis-and-LLM-based-)
 
-## 👥 Team
-
-[Add team member information here]
-
-## 🙏 Acknowledgments
-
-We thank:
-- The developers of the benchmark applications used in our evaluation
-- The open-source community for their valuable tools and libraries
-- Survey participants for their valuable feedback
-- ICSE 2026 reviewers for their constructive comments
-
-## 📧 Contact
-
-For questions, suggestions, or collaboration opportunities, please:
-- Open an issue on GitHub
-- Contact the authors via email: [contact@saint-project.org]
-- Join our community discussions
 
 ---
 
